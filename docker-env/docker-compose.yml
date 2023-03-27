@@ -1,0 +1,15 @@
+services:
+  postgres:
+    container_name: data
+    image: postgres:15.1
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
+  sidecar:
+    container_name: loading
+    image: constellation:1.0.0
+    depends_on: 
+      - postgres
+    command: [ "npm", "run", "db:setup" ] 
