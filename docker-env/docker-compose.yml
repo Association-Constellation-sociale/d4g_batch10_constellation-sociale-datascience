@@ -1,6 +1,6 @@
 services:
   postgres:
-    container_name: data
+    container_name: constellation-sociale-data
     image: postgres:15.1
     environment:
       POSTGRES_PASSWORD: postgres
@@ -8,8 +8,10 @@ services:
     ports:
       - "5432:5432"
   sidecar:
-    container_name: loading
-    image: constellation:1.0.0
+    container_name: constellation-sociale-loading
+    image: ghcr.io/association-constellation-sociale/constellation:latest
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@postgres:5432/constellation-sociale
     depends_on: 
       - postgres
     command: [ "npm", "run", "db:setup" ] 
