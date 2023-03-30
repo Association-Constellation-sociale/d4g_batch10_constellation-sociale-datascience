@@ -13,6 +13,6 @@ and you can access to postgres with
 make psql
 ```
 
-you will need the passeword which is in the docker-compose file :) 
+you will need the password which is in the docker-compose file :) 
 
 Enjoy !

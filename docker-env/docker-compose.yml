@@ -1,3 +1,4 @@
+name: 'data-constellation-sociale'
 services:
   postgres:
     container_name: constellation-sociale-data
