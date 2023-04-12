@@ -6,6 +6,7 @@ This setup will help you setup a database with constellation-sociale most recent
 
 ### Prerequisite
 - You must have docker and docker-compose installed.
+- Login to the github docker regsitry, you must create a personal access token, the process is detailed [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic). You can then login with: `docker login ghcr.io -u USERNAME --password-stdin` and provide the access token.
 
 ## Setup the postgresql database
 
@@ -26,6 +27,7 @@ Enjoy !
 ## Setup (windows)
 ### Prerequisite
 - DockerDesktop must be installed.
+- Login to the github docker regsitry, you must create a personal access token, the process is detailed [here](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry#authenticating-with-a-personal-access-token-classic). You can then login with: `docker login ghcr.io -u USERNAME --password-stdin` and provide the access token.
 
 ## Setup the postgresql database
 - Run `docker-compose up -d` in the `docker-env` folder.
